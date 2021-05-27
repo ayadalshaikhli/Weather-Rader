@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Josefin+Slab&family=Roboto&display=swap");
+:root {
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Fredoka One", cursive;
+}
+body {
+  font-family: var(--ff-primary);
+  background: #000000;
+}
+.jumbotron {
+  color: antiquewhite;
+}
+
+/* ===================== */
+/* Back Ground Pictures */
+/* ===================== */
+.background {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(31, 31, 31);
+}
+
+.background-img-night-time-moon {
+  position: fixed;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  z-index: 3;
+}
+
+.background-img-night-time-trees {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  bottom: 0;
+  z-index: 3;
+}
+.background-img-night-time-stars {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Sun day light */
+
+.background-img-day-time-sun {
+  position: fixed;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  z-index: 3;
+}
+.is-active-night {
+  display: none;
+}
+.is-active-day {
+  display: none;
+}
+.background-img-day-time-daygreen {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  height: 100vh;
+  bottom: 0;
+  z-index: 3;
+}
+.background-img-day-time-cloud1 {
+  position: absolute;
+  object-fit: cover;
+  width: 30%;
+  top: 0;
+  right: 0;
+  /* height: 100vh; */
+}
+.background-img-day-time-cloud2 {
+  position: absolute;
+  object-fit: cover;
+  width: 40%;
+  left: 0;
+  top: 200px;
+  /* height: 100vh; */
+}
+/* .daynight {
+  display: none;
+} */
+.list-group {
+  width: 400px;
+  padding: 1.5rem;
+  display: inline-block;
+}
+
+.city-list {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.infowrap {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+.display-4 {
+  position: fixed;
+  font-size: 6em;
+  color: #c9c8c9;
+  z-index: 2;
+  left: 400px;
+  top: 150px;
+  font-family: var(--ff-secondary);
+}
+.display-4 span {
+  padding-left: 200px;
+}
+
+/* Weather Cards Section */
+
+.weather-cards {
+  display: flex;
+  position: relative;
+  background-color: #000000;
+  width: 100%;
+  height: 70vh;
+  z-index: 6;
+  top: -2px;
+  flex-direction: column;
+}
+.weather-cards h1 {
+  margin: 0 auto;
+  padding: 1%;
+  font-size: 3em;
+}
+
+/* ========= */
+/* Main Card */
+/* =========== */
+.main-card {
+  height: 60vh;
+  width: 20%;
+  margin: 0 auto;
+  background-color: #000000;
+}
+.main-card div {
+  z-index: 2;
+}
+.main-card .mountain-big {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  height: 50%;
+  width: 100%;
+  left: 0;
+}
+.main-card .sky-big {
+  display: flex;
+  position: absolute;
+  top: 0;
+  height: 50vh;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+}
+.main-card .both-big {
+  display: flex;
+  position: absolute;
+  top: 20%;
+
+  z-index: 2;
+  width: 15%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+.main-card .animation-text-big {
+  height: 300vh;
+}
+
+/* ========= */
+/* Small Card */
+/* =========== */
+
+.small-card {
+  height: 40vh;
+  background-color: #000000;
+  overflow: hidden;
+  color: black;
+}
+.small-card div {
+  z-index: 2;
+}
+.small-card .mountain {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  height: 50%;
+  width: 100%;
+  left: 0;
+}
+.small-card .sky {
+  display: flex;
+  position: absolute;
+  top: 0;
+  height: 30vh;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+}
+.small-card .both {
+  display: flex;
+  position: absolute;
+  top: 40%;
+  z-index: 2;
+  width: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.animation-text .card-title {
+  padding-top: 20px;
+}
+
+.secound-Section {
+  display: flex;
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  background-color: #000000;
+  height: 50vh;
+  padding-left: 200px;
+}
+
+.container-bottom {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  text-shadow: 2px 1px 4px #000000;
+}
+
+@media (max-width: 860px) {
+  .infowrap {
+    flex-direction: column;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 1px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    width: 100%;
+  }
+}
+.myspdiv {
+  margin: 15px;
+  width: 200px;
+}
+
+.hero-weather-list {
+  list-style: none;
+  white-space: nowrap;
+  font-size: 1.7em;
+}
+p {
+  white-space: nowrap;
+}
+
+.card-body-div {
+  background-color: rgb(42, 95, 165);
+  padding: 8px;
+}
+@media (max-width: 860px) {
+  .list-group {
+    width: 100%;
+    padding: 15px;
+  }
+}
+@media (max-width: 860px) {
+  .card {
+    width: 95%;
+
+    margin: 10px;
+    height: fit-content;
+  }
+}
+
+@media (max-width: 860px) {
+  .card-body,
+  .hero-weather-list {
+    margin: 0px;
+    padding: 15px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .rightInfoCard {
+    position: relative;
+    left: 0px;
+  }
+}
+
+@media (max-width: 860px) {
+  .myspdiv {
+    width: 100%;
+    margin: 0px;
+    margin-top: 10px;
+  }
+}

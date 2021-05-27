@@ -1,59 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/sttle.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
 
-<body>
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+
+  <body>
     <!--         Header              -->
     <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4">Weather Dashboard</h1>
-        </div>
-    </div>
-
-
-    <div class="infowrap">
-        <div class="list-group">
+      <div class="background">
+        <!-- <img src="background-img-day-time" alt="" /> -->
+        <div class="infowrap">
+          <div class="list-group">
             <!--         Search  Button              -->
             <div class="input-group mb-3">
-                <input type="text" class="form-control" id="search-input" placeholder="City name" aria-label="City name"
-                    aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+              <input
+                type="text"
+                class="form-control"
+                id="search-input"
+                placeholder="City name"
+                aria-label="City name"
+                aria-describedby="button-search"
+              />
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="button-search"
+              >
+                Search
+              </button>
             </div>
 
             <!--           City List               -->
+            <ul class="list-group city-list"></ul>
+          </div>
 
-            <ul class="list-group city-list">
-
-            </ul>
-
+          <!--           Right Card               -->
         </div>
+        <div id="daynight" class="is-active-night">
+          <img
+            id="night"
+            class="background-img-night-time-stars"
+            src="./assets/img/stars.png"
+            alt=""
+          />
+          <img
+            id="night"
+            class="background-img-night-time-moon"
+            src="./assets/img/moon.png"
+            alt=""
+          />
 
-        <!--           Right Card               -->
+          <img
+            id="night"
+            class="background-img-night-time-trees"
+            src="./assets/img/woods.png"
+            alt=""
+          />
+        </div>
+        <div id="daylight" class="is-active-day">
+          <img
+            id="day"
+            class="background-img-day-time-cloud1"
+            src="./assets/img/cloud1.png"
+            alt=""
+          />
+          <img
+            id="day"
+            class="background-img-day-time-cloud2"
+            src="./assets/img/cloud2.png"
+            alt=""
+          />
+          <img
+            id="day"
+            class="background-img-day-time-sun"
+            src="./assets/img/sun.png"
+            alt=""
+          />
 
-
-
+          <img
+            id="day"
+            class="background-img-day-time-daygreen"
+            src="./assets/img/daygreen.png"
+            alt=""
+          />
+        </div>
+        <div class="container">
+          <h1 class="display-4">Weather <span>Dashboard</span></h1>
+        </div>
+      </div>
     </div>
 
     <!--           Weather cards go here              -->
+    <!-- <section class="weather-cards"> -->
+    <!-- <h1>5 day forcast</h1>
+      <div class="card text-center main-card">
+        <img
+          class="mountain"
+          src="./assets/img/card-imgs/DAYMOUNTIN.png"
+          alt=""
+        />
+        <img class="both" src="./assets/img/card-imgs/sun.png" alt="" />
+        <img class="sky" src="./assets/img/card-imgs/DAYSKY.png" alt="" />
+        <div class="animation-text">
+          <div class="card-body">
+            <div class="card-text">Arsenal (MU)</div>
+            <div class="card-text text-muted">5/26/2021</div>
+            <h5 class="card-title">clear sky</h5>
+            <p class="card-text">Temperature:</p>
+            <p class="card-text">Humidity:</p>
+            <p class="card-text">Wind Speed:</p>
+            <p class="card-text">UV Index:</p>
+          </div>
+        </div>
+      </div> -->
+    <!-- </section> -->
+    <!-- <div class="container">
+      <div class="row">
+        <div class="card text-center small-card col-lg-2">
+          <img
+            class="mountain"
+            src="./assets/img/card-imgs/DAYMOUNTIN.png"
+            alt=""
+          />
+          <img class="both" src="./assets/img/card-imgs/sun.png" alt="" />
+          <img class="sky" src="./assets/img/card-imgs/DAYSKY.png" alt="" />
+          <div class="animation-text">
+            <div class="card-title">5/27/2021</div>
+            <div class="card-body">
+              <p class="card-text">9*</p>
+              <h5 class="card-title">Logo</h5>
+              <p class="card-text">Humidity:</p>
+            </div>
+          </div>
+        </div>
 
+        <div class="card text-center small-card col-lg-2">
+          <img
+            class="mountain"
+            src="./assets/img/card-imgs/NIGHTMOUNTIN.png"
+            alt=""
+          />
+          <img class="both" src="./assets/img/card-imgs/moon.png" alt="" />
+          <img class="sky" src="./assets/img/card-imgs/NIGHTSKY.png" alt="" />
+          <div class="animation-text">
+            <div class="card-title">5/27/2021</div>
+            <div class="card-body">
+              <p class="card-text">9*</p>
+              <h5 class="card-title">Logo</h5>
+              <p class="card-text">Humidity:</p>
+            </div>
+          </div>
+        </div>
+        <div class="card text-center small-card col-lg-2">
+          <img
+            class="mountain"
+            src="./assets/img/card-imgs/DAYMOUNTIN.png"
+            alt=""
+          />
+          <img class="both" src="./assets/img/card-imgs/sun.png" alt="" />
+          <img class="sky" src="./assets/img/card-imgs/DAYSKY.png" alt="" />
+          <div class="animation-text">
+            <div class="card-title">5/27/2021</div>
+            <div class="card-body">
+              <p class="card-text">9*</p>
+              <h5 class="card-title">Logo</h5>
+              <p class="card-text">Humidity:</p>
+            </div>
+          </div>
+        </div>
+        <div class="card text-center small-card col-lg-2">
+          <img
+            class="mountain"
+            src="./assets/img/card-imgs/NIGHTMOUNTIN.png"
+            alt=""
+          />
+          <img class="both" src="./assets/img/card-imgs/moon.png" alt="" />
+          <img class="sky" src="./assets/img/card-imgs/NIGHTSKY.png" alt="" />
+          <div class="animation-text">
+            <div class="card-title">5/27/2021</div>
+            <div class="card-body">
+              <p class="card-text">9*</p>
+              <h5 class="card-title">Logo</h5>
+              <p class="card-text">Humidity:</p>
+            </div>
+          </div>
+        </div>
+        <div class="card text-center small-card col-lg-2">
+          <div class="card-header">Arsenal (MU)</div>
+          <div class="card-body">
+            <h5 class="card-title">clear sky</h5>
 
-
+            <p class="card-text">Temperature:</p>
+            <p class="card-text">Humidity:</p>
+          </div>
+          <div class="card-footer text-muted">5/26/2021</div>
+        </div>
+      </div>
+    </div> -->
     <!--           link               -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-        crossorigin="anonymous"></script>
-    <script src="./assets/script.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"
+      integrity="sha512-Q+G390ZU2qKo+e4q+kVcJknwfGjKJOdyu5mVMcR95NqL6XaF4lY4nsSvIVB3NDP54ACsS9rqhE1DVqgpApl//Q=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
