@@ -132,11 +132,6 @@ body {
   top: -2px;
   flex-direction: column;
 }
-.weather-cards h1 {
-  margin: 0 auto;
-  padding: 1%;
-  font-size: 3em;
-}
 
 /* ========= */
 /* Main Card */
@@ -236,7 +231,11 @@ body {
   height: 50vh;
   padding-left: 200px;
 }
-
+.row h1 {
+  margin: 0 auto;
+  padding: 1%;
+  font-size: 3em;
+}
 .container-bottom {
   color: rgb(255, 255, 255);
   font-weight: 700;

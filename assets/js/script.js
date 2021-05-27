@@ -141,7 +141,6 @@ function displayInfo(rawData) {
         $(".weather-cards").remove();
     }
     let weatherCards = $("<section>").addClass("weather-cards").attr("id", "weather-cards").appendTo(document.body);
-    $("<h1>").text("5 Day Forecast").appendTo(weatherCards);
     let cardDiv = $("<div>").addClass("card text-center main-card").appendTo(weatherCards);
     function checkWeatherDes() {
         if (rawData.weather[0].icon == "01d") {
@@ -182,6 +181,7 @@ function fiveDayForecastDisplay( fiveDayData ) {
     let secoundSection = $("<section>").addClass("secound-Section").appendTo(document.body)
     let smallCardsContainer = $("<div>").addClass("container").appendTo(secoundSection);
     let smallCardsRow = $("<div>").addClass("row").appendTo(smallCardsContainer);
+    $("<h1>").text("5 Day Forecast").appendTo(smallCardsRow);
    
     for (i=0; i<fiveDayForecast.length; i++){
             nextDay.setDate(nextDay.getDate() + 1);
