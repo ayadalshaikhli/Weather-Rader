@@ -98,7 +98,7 @@ body {
   padding-left: 0px;
   padding-right: 0px;
 }
-.infowrap {
+.information {
   display: flex;
   position: absolute;
   top: 50%;
@@ -232,9 +232,12 @@ body {
   padding-left: 200px;
 }
 .row h1 {
-  margin: 0 auto;
+  margin-left: 400px;
   padding: 1%;
-  font-size: 3em;
+  font-size: 2em;
+}
+.card-text {
+  padding-bottom: 10px;
 }
 .container-bottom {
   color: rgb(255, 255, 255);
@@ -271,41 +274,57 @@ p {
   background-color: rgb(42, 95, 165);
   padding: 8px;
 }
-@media (max-width: 860px) {
-  .list-group {
+
+@media (max-width: 576px) {
+  /* About Section */
+  .display-4 {
+    top: 20%;
+    left: 0;
+    font-size: 3em;
+  }
+  .main-card {
+    width: 50%;
+    margin-top: 20px;
+  }
+  .small-card {
+    margin-right: 200px;
+    margin-bottom: 20px;
+  }
+  .secound-Section {
+    padding: 0;
+  }
+  .row {
     width: 100%;
-    padding: 15px;
+    padding-left: 50px;
   }
-}
-@media (max-width: 860px) {
-  .card {
-    width: 95%;
-
-    margin: 10px;
-    height: fit-content;
+  .row h1 {
+    margin: 0 auto;
   }
 }
 
-@media (max-width: 860px) {
-  .card-body,
-  .hero-weather-list {
-    margin: 0px;
-    padding: 15px;
-    font-size: 0.8rem;
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .display-4 {
+    top: 20%;
+    left: 0;
+    font-size: 3em;
   }
-}
-
-@media (max-width: 860px) {
-  .rightInfoCard {
-    position: relative;
-    left: 0px;
+  .main-card {
+    width: 50%;
+    margin-top: 20px;
   }
-}
-
-@media (max-width: 860px) {
-  .myspdiv {
-    width: 100%;
-    margin: 0px;
-    margin-top: 10px;
+  .small-card {
+    margin-right: 200px;
+    margin-bottom: 20px;
+  }
+  .secound-Section {
+    padding: 0;
+  }
+  .row {
+    width: 70%;
+    padding-left: 50px;
+  }
+  .row h1 {
+    margin: 0 auto;
   }
 }

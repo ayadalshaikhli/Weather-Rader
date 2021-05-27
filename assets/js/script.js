@@ -106,7 +106,7 @@ function checkDayTime() {
         var currentTime = moment().format('HH') ;
         dayCheck()
         function dayCheck() {
-          if (1 <= currentTime) {
+          if (15 <= currentTime) {
               $("#daynight").removeClass("is-active-night");
               $(".jumbotron").css("background-color", "rgb(31, 31, 31)")
               moonAnimation()
@@ -117,7 +117,7 @@ function checkDayTime() {
           }
 
 
-          if (20 <= currentTime){
+          if (15 >= currentTime){
           $("#daylight").removeClass("is-active-day");
           $(".jumbotron").css("background-color", "#00cbfe")
 
@@ -157,7 +157,7 @@ function displayInfo(rawData) {
     let animationText = $("<div>").addClass("animation-text-big").appendTo(cardDiv);
     let cardBody = $("<div>").addClass("card-body animation-big").appendTo(animationText);
     $("<div>").addClass("card-text").appendTo(cardBody).text(rawData.name + " " + rawData.sys.country);
-    $("<div>").addClass("card-text text-muted").appendTo(cardBody).text(new Date().toLocaleDateString());
+    $("<div>").addClass("card-text").appendTo(cardBody).text(new Date().toLocaleDateString());
     $("<h5>").addClass("card-title").appendTo(cardBody).text(rawData.weather[0].description);
     let heroWeatherIcon = "http://openweathermap.org/img/wn/" + rawData.weather[0].icon + '.png';
     $("<img>").addClass("current-weather-image").attr("src", heroWeatherIcon).appendTo(cardBody);
@@ -169,7 +169,7 @@ function displayInfo(rawData) {
     cardAnimationBig()
 }
 
-// ----------------------- Display Info for next 5 days
+// ----------------------- Display Info for next 5 days=
 function fiveDayForecastDisplay( fiveDayData ) {
     let fiveDayForecast = [[],[],[],[],[]];
     console.log( "Five Day Data" , fiveDayData )
@@ -192,7 +192,7 @@ function fiveDayForecastDisplay( fiveDayData ) {
             console.log(fiveDayData.hourly[0].weather[0].main);     
     }
     for (i=0; i < fiveDayForecast.length;i++){
-            var cardBgPrimary = $("<div>").addClass("card text-center small-card col-lg-2").appendTo(smallCardsRow);
+            var cardBgPrimary = $("<div>").addClass("card text-center small-card col-sm-12 col-md-4 col-lg-2").appendTo(smallCardsRow);
             function checkWeatherdescription() {
                 if(fiveDayForecast[i][1] == "01d"){
                     $("<img>").addClass("mountain").attr("src", "./assets/img/card-imgs/DAYMOUNTIN.png").appendTo(cardBgPrimary);
