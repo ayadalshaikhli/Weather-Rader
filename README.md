@@ -12,7 +12,7 @@
   <p align="center">
     Weather Project
     <br />
-    <a href="https://ayadalshaikhli.github.io/weatherproject/"><strong>Explore the Website »</strong></a>
+    <a href="https://ayadalshaikhli.github.io/Weather-Rader/"><strong>Explore the Website »</strong></a>
     <br />
   </p>
 </p>
