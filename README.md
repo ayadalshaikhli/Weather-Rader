@@ -1,4 +1,3 @@
-# Weather Project
 
 ## Weather Project
 
