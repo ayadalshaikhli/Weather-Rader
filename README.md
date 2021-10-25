@@ -36,7 +36,7 @@
 
 ## About The Project
 
-This application is designed to pull current weather data for which every city you search, also will show forecast for five upcoming days
+This application is designed to pull current weather data for which every city you search. Also will show forecast for five upcoming days
 
 ### Built With
 
